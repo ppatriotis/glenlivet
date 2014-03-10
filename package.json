@@ -1,0 +1,35 @@
+{
+  "name": "glenlivet",
+  "version": "0.0.1",
+  "author": {
+    "name": "Eric Weber",
+    "email": "eric@prolificinteractive.com",
+    "url": "prolificinteractive.com"
+  },
+  "description": "A hook and plugin system that allows you to create flexible, reusable processing pipelines.",
+  "keywords": [
+    "hooks",
+    "plugins",
+    "framework"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prolificeric/glenlivet"
+  },
+  "main": "./index.js",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "should": "~2.1.1",
+    "mocha": "^1.17.1"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "readmeFilename": "README.md"
+}
+
