@@ -20,4 +20,15 @@ describe('Glenlivet barrels', function () {
 			}
 		});
 	});
+
+	it('should emit a `bottle` event when a bottle is added to it', function (done) {
+		var barrel = glenlivet.createBarrel({});
+
+		barrel.on('bottle', function (bottle) {
+			bottle.should.be.an.instanceOf(glenlivet.Bottle)
+			done();
+		});
+
+		barrel.createBottle('myBottle', {});
+	});
 });
