@@ -21,16 +21,16 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "lodash": "~2.4.1",
-    "coveralls": "^2.8.0",
-    "mocha-lcov-reporter": "0.0.1"
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "should": "~2.1.1",
-    "mocha": "^1.17.1"
+    "mocha": "^1.17.1",
+    "blanket": "~1.1.6",
+    "coveralls": "^2.8.0",
+    "mocha-lcov-reporter": "0.0.1"
   },
   "scripts": {
     "test": "make test-coveralls"
-  },
-  "readmeFilename": "README.md"
+  }
 }
