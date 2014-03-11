@@ -107,7 +107,7 @@ You can register a plugin at multiple scopes: glenlivet, barrels, and bottles.
 ```javascript
 glenlivet.plugins.register(myPlugin); //At the glenlivet scope
 barrel.plugins.register(myPlugin); //At the barrel scope
-bottle.plugins.regiater(myPlugin); //At the bottle scope
+bottle.plugins.register(myPlugin); //At the bottle scope
 ```
 
 ## Using Hooks
