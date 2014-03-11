@@ -5,6 +5,10 @@
 
 Glenlivet is a hook and plugin system that allows you to create flexible, reusable processing workflows.
 
+## Installation
+
+	npm install glenlivet
+
 ## Overview
 
 - Configure processing workflows declaratively with "bottles"
@@ -16,7 +20,7 @@ Glenlivet is a hook and plugin system that allows you to create flexible, reusab
 
 ## Philosophy
 
-Glenlivet focused on reusability and flexibility. Its job is to make it as easy as possible to write and implement plugins.
+Glenlivet's job is to make it as easy as possible to write and implement plugins. Similar to [Grunt](https://github.com/gruntjs/grunt), but for writing apps.
 
 ## How It's Used
 
