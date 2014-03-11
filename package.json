@@ -31,6 +31,6 @@
     "mocha-lcov-reporter": "0.0.1"
   },
   "scripts": {
-    "test": "make test-coveralls"
+    "test": "make test"
   }
 }
