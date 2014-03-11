@@ -6,7 +6,7 @@
     "email": "eric@prolificinteractive.com",
     "url": "prolificinteractive.com"
   },
-  "description": "A hook and plugin system that allows you to create flexible, reusable processing pipelines.",
+  "description": "A hook and plugin system that allows you to create flexible, reusable processing workflows.",
   "keywords": [
     "hooks",
     "plugins",
