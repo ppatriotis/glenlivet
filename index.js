@@ -5,4 +5,4 @@ if (process.env.GLENLIVET_COV) {
     });
 }
 
-module.exports = require('./lib');
+module.exports = require('./lib/glenlivet');
