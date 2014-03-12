@@ -13,6 +13,8 @@ Glenlivet is a hook and plugin system that allows you to create flexible, reusab
 
 ## Overview
 
+Glenlivet's job is to make it as easy as possible to write and implement plugins. Similar to [Grunt](https://github.com/gruntjs/grunt), but for writing apps.
+
 - Configure processing workflows declaratively with "bottles"
 - Bundle bottles together using "barrels"
 - Plugins automatically load based on configuration keys
@@ -22,7 +24,7 @@ Glenlivet is a hook and plugin system that allows you to create flexible, reusab
 
 ## Philosophy
 
-Glenlivet's job is to make it as easy as possible to write and implement plugins. Similar to [Grunt](https://github.com/gruntjs/grunt), but for writing apps.
+Glenlivet is meant to be modular and flexible. Its goal is to allow a bunch of plugins to work together in a loosely coupled way.
 
 ## How It's Used
 
