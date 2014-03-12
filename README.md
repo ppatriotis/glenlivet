@@ -49,13 +49,8 @@ testBottle.fetch({
 	fetch: {
 		page: '/about'
 	}
-}, function (err, result) {
-	if (err) {
-		console.log('Dammit, something broke.');
-		return;
-	}
-
-	console.log(result.fetch.html);
+}, function (result) {
+	console.log(result.fetch.error || result.fetch.body);
 });
 ```
 
