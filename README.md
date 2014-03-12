@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/prolificeric/glenlivet.png?branch=master)](https://travis-ci.org/prolificeric/glenlivet)
 [![Coverage Status](https://coveralls.io/repos/prolificeric/glenlivet/badge.png)](https://coveralls.io/r/prolificeric/glenlivet)
-[![Dependencies Status](https://david-dm.org/prolificeric/glenlivet.png)](https://david-dm.org/prolificeric/glenlivet.png)
+[![Dependencies Status](https://david-dm.org/prolificeric/glenlivet.png)](https://david-dm.org/prolificeric/glenlivet)
 [![Code Climate](https://codeclimate.com/github/prolificeric/glenlivet.png)](https://codeclimate.com/github/prolificeric/glenlivet)
 
 Glenlivet is a hook and plugin system that allows you to create flexible, reusable processing workflows.
