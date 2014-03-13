@@ -110,19 +110,39 @@ describe('Glenlivet bottles', function () {
 		});
 	});
 
-	it('should inherit straight from Glenlivet plugins if not a child of a barrel', function () {
+	it('should inherit straight from Glenlivet plugins if not a child of a barrel', function (done) {
 		var Bottle = glenlivet.Bottle;
 
-		glenlivet.plugins.register(function myPlugin (context) {
+		glenlivet.plugins.register(function inheritedGlenlivetPlugin (context) {
 			context.is(Bottle, function (bottle, myConfig) {
 				myConfig.z.should.equal('ABC');
+				done();
 			});
 		});
 
 		new Bottle({
-			myPlugin: {
+			inheritedGlenlivetPlugin: {
 				z: 'ABC'
 			}
 		});
+	});
+
+	it('should inherit plugin configuration from its parent barrel', function () {
+		var barrel = glenlivet.createBarrel({
+			myPlugin: {
+				foo: 'bar'
+			}
+		});
+
+		var bottle = barrel.createBottle('testBottle', {
+			myPlugin: {
+				x: 1
+			}
+		});
+
+		var config = bottle.pluginConfig.myPlugin;
+
+		config.x.should.equal(1);
+		config.foo.should.equal('bar');
 	});
 });
