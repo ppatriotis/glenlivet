@@ -169,7 +169,22 @@ function myPlugin (context) {
 
 ### Triggering Hooks
 
-Glenlivet adds convenience methods that trigger top-level hooks like so:
+To trigger the hook cascade, use the .trigger() method.
+
+#### Example
+
+```javascript
+bottle.hooks.trigger('hook:subhook:etc', { foo: 'bar' }, callback);
+```
+
+.trigger() takes 3 arguments:
+- `hook`: the path to the hook
+- `decorator` (optional): an object passed through each hook and finally to the callback
+- `callback` (optional): run after all hooks are triggered
+
+### Shortcut Methods
+
+Glenlivet also adds convenience methods to bottles that trigger top-level hooks, like so:
 
 ```javascript
 function addition (context) {
@@ -193,3 +208,21 @@ bottle.addition({
 	console.log(result.addPlugin.sum); //Should output "150"
 });
 ```
+
+### Joining Hooks
+
+Hooks can be joined together using the .join() method. As a convenience, it can also map decorator values so that, for example, data from one plugin can be seamlessly piped into another.
+
+#### Example
+
+```javascript
+bottle.plugins.join('hookA', 'hookB', {
+	'hookA:x': 'hookB:y'
+});
+```
+
+.join() takes 3 arguments
+- `hookA`: the path to the connecting hook
+- `hookB`: the path to the hook that will be triggered after hookA
+- `map` (optional): maps values from one part of the decorator object to another, and creates any part of the path that does not exist
+

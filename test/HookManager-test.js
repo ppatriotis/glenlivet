@@ -97,6 +97,46 @@ describe('Adding hooks', function () {
 		});
 	});
 	
+	it('should trigger another hook using .join()', function (done) {
+		var hooks = new HookManager({
+			foo: {},
+			bar: {}
+		});
+
+		hooks.join('foo', 'bar');
+
+		hooks.after('bar', function (decorator) {
+			decorator.x.should.equal(1);
+			done();
+		});
+
+		hooks.trigger('foo', {
+			x: 1
+		});
+	});
+	
+	it('when using .join(), should map decorator values', function (done) {
+		var hooks = new HookManager({
+			foo: {},
+			bar: {}
+		});
+
+		hooks.join('foo', 'bar', {
+			'foo.x': 'bar.y'
+		});
+
+		hooks.after('bar', function (decorator) {
+			decorator.bar.y.should.equal(1);
+			done();
+		});
+
+		hooks.trigger('foo', {
+			foo: {
+				x: 1
+			}
+		});
+	});
+	
 	it('should deep merge hook trees', function () {
 		var hooks = new HookManager({
 			foo: {
